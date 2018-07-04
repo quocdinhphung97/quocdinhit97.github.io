@@ -1,51 +1,93 @@
-# Site settings
-name: Quốc Định
-description: "DEV PHP"
-url: ""
-
-
-# Delete the lines you don't need
-# about 5 elements are recomended
-github_username:  dashingcode
-codepen_username: your_codepen_username_goes_here
-facebook_username: your_facebook_username_goes_here
-vk_username: your_vk_username_goes_here
-twitter_username: your_twitter_username_goes_here
-google_plus_username: your_google_plus_username_goes_here
-linkedin_username: your_linked_in_username_goes_here
-vine_username:  your_vine_username_goes_here
-instagram_username:  your_instagram_username_goes_here
-flickr_username: your_flickr_username_goes_here
-steam_username: your_steam_username_goes_here
-soundcloud_username:  your_soundcloud_username_goes_here
-stack_of_username: your_stack_overflow_account_id_number_goes_here
-reddit_username: your_reddit_username_goes_here
-medium_username:  your_medium_username_goes_here
-tumblr_username: your_tumblr_username_goes_here
-weibo_username: your_weibo_username_goes_here
-lastfm_username: your_lastfm_username_goes_here
-blog_url: "/blog"
-email: your-email@example.domain
-public_key_url: "https://raw.pastebin.com/LINK-TO-PUBLIC-KEY"
-
-
-avatar: yes
-#avatar_img_path: "imgs/avatar.jpg""
-# You can link to your GitHub image. That way it will get updated
-# automatically whenever you change your GitHub profile picture
-avatar_img_path: "imgs/p-blue.jpg"
-
-
-front_img: yes
-front_img_path: "imgs/background.jpg"
-#front_img_path: "https://external.url/image.jpg"
-
-
-favicon_img: yes
-favicon_img_path: "imgs/icon.png"
-#favicon_img_path: "https://external.url/favicon.ico"
-
-
-# Build settings
+# Jekyll configuration
 markdown: kramdown
-permalink: pretty
+highlighter: rouge
+paginate: 100 # it will paginate after this number
+language: 'en-uk'
+
+# edit baseurl to simply '/' if using as your personal page (instead of a project page)
+baseurl: /jasper2/
+
+# Website info
+title: Ghost
+description: The professional publishing platform
+cover: assets/images/blog-cover.jpg
+logo: assets/images/blog-icon.png
+logo_dark: assets/images/favicon.png
+favicon: assets/images/favicon.png
+production_url: https://jekyller.github.io/jasper2/
+source_url: https://github.com/jekyller/jasper2/
+
+# Social info
+navigation: True # show the navbar links
+subscribers: True # you need to connect an external service for this to work,
+# if 'True' the submit button is disabled for now, but you can change that
+# by editing `_includes/subscribe-form.html`
+twitter: tryghost # replace by your username
+facebook: ghost # replace by your username
+
+# Disqus
+disqus: False
+disqus_shortname: jekyller # replace with your disqus username
+
+# Google Analytics
+google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+
+# Permalinks
+permalink: /:title
+# permalink: /author/:author
+# permalink: /tag/:tag
+
+# Authors' info in `_data/authors.yml`
+# Tags' info in `_data/tags_info.yml`
+
+# gems and other configs
+plugins: [jekyll-paginate, jekyll-feed]
+
+feed:
+  path: feed.xml
+
+# Additional settings available on the front-matter
+# Site logo in the index.html (as in demo.ghost.io)
+# Author's page cover in _layouts/author.html
+# The same for page.html and tag.html layouts
+# Post's page cover as a per-post basis _posts/...
+# Disqus comments as a per-post basis
+# ...
+
+# Settings for builing master branch with travis-ci
+# with jekyll-travis
+
+# Settings for deploy rake task
+# Username and repo of Github repo, e.g.
+# https://github.com/USERNAME/REPO.git
+# username defaults to ENV['GIT_NAME'] used by Travis
+# repo defaults to USERNAME.github.io
+# Branch defaults to "source" for USERNAME.github.io
+# or "master" otherwise
+safe: False
+lsi: False
+username: jekyller
+repo: jasper2
+branch: master
+relative_source: ../jasper2/
+destination: ../jasper2-pages/
+production_url:  https://jekyller.github.io/jasper2/
+source_url:  https://github.com/jekyller/jasper2/
+
+exclude:
+  - assets/css
+  - node_modules
+  - vendor
+  - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - GHOST.txt
+  - gulpfile.js
+  - LICENSE
+  - package.json
+  - Rakefile
+  - README.md
+  - script.py
+  - changelog.md
+  - "*.Rmd"
+  - .git*
