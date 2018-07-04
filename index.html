@@ -1,125 +1,121 @@
 ---
-layout: null
-title: Jekyll Theme - Home Page - Massively
-description: Every great website starts with a great homepage. The homepage tells your viewers what your site is all about and gives your viewers a place to come back to.
-sitemap:
-    priority: 1.0
-    lastmod: 2017-11-02
-    changefreq: weekly
+permalink: /
 ---
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-  Jekyll integration by somiibo.com
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-	<head>
-    {% include head.html %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{ site.description }}">
+        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+        {% if site.favicon_img %}
+        <link rel="shortcut icon" href="{{ site.favicon_img_path }}" />
+        {% endif %}
+        <link rel="stylesheet" href="{{ "css/front.css" | prepend: site.baseurl }}">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="content">
+            {% if site.front_img %}
+            <img src="{{ site.front_img_path }}" id="fullscreen">
+            {% endif %}
 
+            {% if site.avatar %}
+                <img src="{{ site.avatar_img_path }}" id="avatar">
+            {% endif %}
 
-	</head>
-	<body class="is-loading">
+            <h1>{{ site.name }}</h1>
+            <h3>{{ site.description }}</h3>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+                <ul>
+                    {% if site.github_username %}
+                    <li><a class="fa fa-2x fa-github" href="https://github.com/{{ site.github_username }}"><span class="description">GitHub</span></a></li>
+                    {% endif %}
 
-				<!-- Intro -->
-					<div id="intro">
-            <h1>{{site.title}}</h1>
-						<h2>The Jekyll Theme Version</h2>
-						<p>Massively is an HTML5 website theme designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
-						and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>. Jekyll integration by <a href="https://somiibo.com">Somiibo</a></p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+                    {% if site.codepen_username %}
+                    <li><a class="fa fa-2x fa-codepen" href="https://codepen.io/{{ site.codepen_username }}"><span class="description">CodePen</span></a></li>
+                    {% endif %}
 
-				<!-- Header -->
-					<header id="header">
-						<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
-					</header>
+                    {% if site.facebook_username %}
+                    <li><a class="fa fa-2x fa-facebook" href="https://facebook.com/{{ site.facebook_username }}"><span class="description">Facebook</span></a></li>
+                    {% endif %}
 
-				<!-- Nav -->
-					<nav id="nav">
+                    {% if site.vk_username %}
+                    <li><a class="fa fa-2x fa-vk" href="https://vk.com/{{ site.vk_username }}"><span class="description">ВКонтакте</span></a></li>
+                    {% endif %}
 
-            {% include nav.html %}
+                    {% if site.twitter_username %}
+                    <li><a class="fa fa-2x fa-twitter" href="https://twitter.com/{{ site.twitter_username }}"><span class="description">Twitter</span></a></li>
+                    {% endif %}
 
-						<ul class="icons">
-              <li><a href="https://twitter.com/{{site.twitter}}" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
-              <li><a href="https://facebook.com/{{site.facebook}}" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
-              <li><a href="https://instagram.com/{{site.instagram}}" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
-              <li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+                    {% if site.google_plus_username %}
+                    <li><a class="fa fa-2x fa-google-plus" href="https://plus.google.com/+{{ site.google_plus_username }}"><span class="description">Google +</span></a></li>
+                    {% endif %}
 
-				<!-- Main -->
-					<div id="main">
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="#">Massively is a versatile Jekyll theme</a></h2>
-									<p>With only a few edits, you can have a stunningly beautiful website <br />
-                    nearly out of the box. Of course... you can always take it further <br />
-                    and make it something even more amazing!</p>
-								</header>
-								<a href="#" class="image main"><img src="{{ "/images/pic01.jpg" | absolute_url }}" alt="" /></a>
-                <p>Regardless of your website's function, the homepage is what brings the user in.
-                  If it's anything short of intriguing, captivating, or just plain cool, you're out of luck and you might deter some visitors.</p>
-                <p>Your homepage must clearly describe what your site is about.
-									Having engaging content will in this manner enable you to offer and it will make your customers more inclined to purchase from you. Content is a way to position your organization in the correct place for your clients to discover you.
-								</p>
-								<p>
-									In this manner, content in itself is a standout amongst the best promoting apparatuses in your whole advertising toolbox! Rather than making your content around your promoting technique, it's limitlessly more productive to fabricate your showcasing around your content.
-								 </p>
+                    {% if site.linkedin_username %}
+                    <li><a class="fa fa-2x fa-linkedin" href="https://linkedin.com/in/{{ site.linkedin_username }}"><span class="description">LinkedIn</span></a></li>
+                    {% endif %}
 
-							</article>
+                    {% if site.vine_username %}
+                    <li><a class="fa fa-2x fa-vine" href="https://vine.co/{{ site.vine_username }}"><span class="description">Vine</span></a></li>
+                    {% endif %}
 
-						<!-- Posts -->
-							<section class="posts">
-                {% for post in site.posts limit:3 %}
-                {% assign mod3 = forloop.index | modulo: 3 %}
-  								<article>
-  									<header>
-  										<span class="date">{{ post.date | date_to_string }}</span>
-  										<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
-  									</header>
-  									<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
-  									<p>{{ post.excerpt }}</p>
-  									<ul class="actions">
-  										<li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
-  									</ul>
-  								</article>
-                  {% if mod3 == 0 %}
-                  <article>
-  									<header>
-  										<h2><a href="#">Sponsored</a></h2>
-  									</header>
+                    {% if site.instagram_username %}
+                    <li><a class="fa fa-2x fa-instagram" href="https://instagram.com/{{ site.instagram_username }}"><span class="description">Instagram</span></a></li>
+                    {% endif %}
 
-  								</article>
-                  {% endif %}
-                {% endfor %}
+                    {% if site.flickr_usernmae %}
+                    <li><a class="fa fa-2x fa-flickr" href="https://flickr.com/photos/{{ site.flickr_username }}"><span class="description">Flickr</span></a></li>
+                    {% endif %}
 
-							</section>
+                    {% if site.steam_username %}
+                    <li><a class="fa fa-2x fa-steam" href="http://steamcommunity.com/id/{{ site.steam_username }}"><span class="description">Steam</span></a></li>
+                    {% endif %}
 
-						<!-- Footer -->
-							<footer>
-                <ul class="actions">
-                  <li><a href="{{ "/blog/" | absolute_url }}" class="button">Our Blog</a></li>
+                    {% if site.soundcloud_username %}
+                    <li><a class="fa fa-2x fa-soundcloud" href="https://soundcloud.com/{{ site.soundcloud_username }}"><span class="description">Soundcloud</span></a></li>
+                    {% endif %}
+
+                    {% if site.lastfm_username %}
+                    <li><a class="fa fa-2x fa-lastfm" href="http://www.last.fm/user/{{ site.lastfm_username }}"><span class="description">Last.fm</span></a></li>
+                    {% endif %}
+
+                    {% if site.stack_of_username %}
+                    <li><a class="fa fa-2x fa-stack-overflow" href="https://stackoverflow.com/users/{{ site.stack_of_username }}"><span class="description">Stack OF</span></a></li>
+                    {% endif %}
+
+                    {% if site.reddit_username %}
+                    <li><a class="fa fa-2x fa-reddit" href="https://reddit.com/user/{{ site.reddit_username }}"><span class="description">Reddit</span></a></li>
+                    {% endif %}
+
+                    {% if site.medium_username %}
+                    <li><a class="fa fa-2x fa-medium" href="https://medium.com/@{{ site.medium_username }}"><span class="description">Medium</span></a></li>
+                    {% endif %}
+
+                    {% if site.tumblr_username %}
+                    <li><a class="fa fa-2x fa-tumblr" href="https://{{ site.tumblr_username }}.tumblr.com/"><span class="description">Tumblr</span></a></li>
+                    {% endif %}
+
+                    {% if site.weibo_username %}
+                    <li><a class="fa fa-2x fa-weibo" href="https://weibo.com/{{ site.weibo_username }}"><span class="description">微博</span></a></li>
+                    {% endif %}
+
+                    {% if site.blog_url %}
+                    <li><a class="fa fa-2x fa-tags" href="{{ site.baseurl }}{{ site.blog_url }}"><span class="description">Blog</span></a></li>
+                    {% endif %}
+
+                    {% if site.email %}
+                    <li><a class="fa fa-2x fa-envelope" href="mailto:{{ site.email }}"><span class="description">Email</span></a></li>
+                    {% endif %}
+
+                    {% if site.public_key_url %}
+                    <li><a class="fa fa-2x fa-key" href="{{ site.public_key_url }}"><span class="description">PGP Key</span></a></li>
+                    {% endif %}
                 </ul>
-							</footer>
+        </div>
 
-					</div>
-
-				<!-- Footer -->
-        {% include foot.html %}
-
-			</div>
-
-		<!-- Scripts -->
-		{% include scripts-main.html %}
-    {% include tracking.html %}
-
-	</body>
+    </body>
 </html>
