@@ -1,69 +1,84 @@
-## You like and use this theme? Then support me. Just [paypal.me/PhlowMedia](https://www.paypal.me/PhlowMedia) :)
+# Jekyll Template - Mediumish by WowThemes.net
 
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=Phlow&url=https://github.com/Phlow/feeling-responsive&title=Support%20Feeling%20Responsive%20Jekyll%20Theme&language=en_GB&tags=github,jekyll,theme,webdesign&category=software)
+[Live Demo](https://wowthemesnet.github.io/mediumish-theme-jekyll/) &nbsp; | &nbsp; [Download](https://github.com/wowthemesnet/mediumish-theme-jekyll/archive/master.zip)
 
+![mediumish](assets/images/mediumish-jekyll-template.png)
 
-# Newsletter: Stay in Touch for Future Updates
+### Features
 
-If you are a webdesigner interested in Jekyll, the static website generator, this little newsletter is for you. I share tutorials, clever code snippets and information about my own Jekyll Themes called [*Feeling Responsive*][7] and [*Simplicity*][8]. Please don't expect weekly emails :)
+- Built for Jekyll
+- Compatible with Github pages
+- Featured Posts
+- Index Pagination
+- Post Share
+- Post Categories
+- Prev/Next Link
+- Category Archives (this is not yet compatible with github pages though)
+- Jumbotron Categories
+- Integrations:
+    - Disqus Comments
+    - Google Analaytics
+    - Mailchimp Integration
+- Design Features:
+    - Bootstrap v4.x
+    - Font Awesome
+    - Masonry
+- Layouts:
+    - Default
+    - Post
+    - Page
+    - Archive
+    
+### Using Mediumish
 
-[![Subscribe to Jekyll Newsletter](https://phlow.github.io/static/tinyletter_subscribe_button.png)](https://tinyletter.com/feeling-responsive)
+- Open <code>_config.yml</code>. If your site is in root, for <code>baseurl</code>, make sure this is set to <code>baseurl: /</code>. Also, change your Google Analytics code, disqus username, authors, Mailchimp list etc.
+- Mediumish requires 2 plugins: 
+    - <code>$ gem install jekyll-paginate</code>
+    - <code>$ gem install jekyll-archives</code>.
+- Edit the menu and footer copyrights in <code>default.html</code>
+- Start by adding your .md files in <code>_posts</code>. Mediumish already has a few as an example. 
+- YAML front matter
+    - featured post - <code>featured:true</code>
+    - exclude featured post from "All stories" loop to avoid duplicated posts - <code>hidden:true</code>
+    - post image - <code>image: assets/images/mypic.jpg</code>
+    - page comments - <code>comments:true</code>
+    - meta description (optional) - <code>description: "this is my meta description"</code>
+    
+YAML Post Example:
+<pre>
+---
+layout: post
+title:  "We all wait for summer"
+author: john
+categories: [ Jekyll, tutorial ]
+image: assets/images/5.jpg
+featured: true
+---
+</pre>
 
+YAML Page Example
+<pre>
+---
+layout: page
+title: Mediumish Template for Jekyll
+comments: true
+---
+</pre>
 
-[![Start Video](https://github.com/Phlow/feeling-responsive/blob/gh-pages/images/video-feeling-responsive-1280x720.jpg)](https://www.youtube.com/embed/3b5zCFSmVvU)
+### Copyright
 
-## A Responsive Jekyll Theme: *Feeling Responsive*
+Copyright (C) 2018 WowThemes.net.
 
-Do you want to get to know *Feeling Responsive*? Than check it out first and have a look on its home at  <http://phlow.github.io/feeling-responsive/>.
+**Mediumish for Jekyll** is designed and developed by [Sal](https://www.wowthemes.net) and it is *free* under MIT license. 
 
-To get to know *Feeling Responsive* check out all the features explained in the [documentation][1].
+<a href="https://www.buymeacoffee.com/sal" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
-And what license is *Feeling Responsive* released under? [This one][2].
+### Contribute
 
+- [Clone the repo](https://github.com/wowthemesnet/mediumish-theme-jekyll).
+- Create a branch off of master and give it a meaningful name (e.g. my-new-mediumish-feature).
+- Open a pull request on GitHub and describe the feature or fix.
 
+-----------------
 
-## Why use this theme?
-
-Feeling Responsive is heavily customizable.
-
-1. Language-Support :)
-2. Optimized for speed and it's responsive.
-3. Built on Foundation Framework.
-4. Six different Headers.
-5. Customizable navigation, footer,...
-
-**[More ›][3]**
-
-
-
-## Changelog
-
-*Feeling Responsive* is in active development. Thank you to everyone who contributed, especially [Róbert Papp][5], [Alexandra von Criegern](https://github.com/plutonik-a) and [Juan Jose Amor Iglesias](https://github.com/jjamor).
-
-**[Read Changelog ›][6]**
-
-
-
-## Video Tutorial
-
-Click the image to [watch the YouTube-Video-Tutorial][4].
-
-[![Start Video](https://github.com/Phlow/feeling-responsive/blob/gh-pages/images/video-feeling-responsive-tutorial-frontpage.jpg)](https://www.youtube.com/watch?v=rLS-BEvlEyY)
-
-
-
-
-
-
-
-
- [1]: http://phlow.github.io/feeling-responsive/documentation/
- [2]: https://github.com/Phlow/feeling-responsive/blob/gh-pages/LICENSE
- [3]: http://phlow.github.io/feeling-responsive/info/
- [4]: https://www.youtube.com/watch?v=rLS-BEvlEyY
- [5]: https://github.com/TWiStErRob
- [6]: https://phlow.github.io/feeling-responsive/changelog/
- [7]: http://phlow.github.io/feeling-responsive/
- [8]: http://phlow.github.io/simplicity/
- [9]: #
- [10]: #
+[Live Demo](https://wowthemesnet.github.io/mediumish-theme-jekyll/) &nbsp; | &nbsp; [Download](https://github.com/wowthemesnet/mediumish-theme-jekyll/archive/master.zip)
