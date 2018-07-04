@@ -1,9 +1,12 @@
-# project
 _site
 .sass-cache
-.vagrant
+.jekyll-metadata
 
-# general
-.DS_Store
-Thumbs.db
-ehthumbs.db
+### CodeKit ###
+# General CodeKit files to ignore
+config.codekit
+/min
+
+### CodeKit Patch ###
+*/codekit-config.json
+.codekit-cache
