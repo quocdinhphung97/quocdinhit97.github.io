@@ -2,7 +2,8 @@
 layout: post
 title:  "Day la bai post demo"
 author: Quoc Dinh
-categories: [ Jekyll, tutorial ]
+categories: [ demo, tutorial ]
+
 video: Dn3B_8cNmPo
 ---
 The die cut has also been employed in the non-juvenile sphere as well, a recent example being Jonathan Safran Foer’s ambitious Tree of Codes. 
