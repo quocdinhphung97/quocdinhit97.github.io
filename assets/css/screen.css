@@ -4,6 +4,11 @@ Copyright: Sal, WowThemes.net, https://www.wowthemes.net
 Version: 1.0.2 
 License: https://www.wowthemes.net/freebies-license/ 
 */
+
+@font-face {
+    font-family: great;
+    src: url('../fonts/VL_GreatVibes-Regular.otf');
+}
  .mainheading {
      padding:1rem 0rem;
 }
@@ -223,7 +228,7 @@ License: https://www.wowthemes.net/freebies-license/
      margin-right:5px;
 }
  .mainheading h1.sitetitle {
-     font-family:Righteous;
+     font-family:great;
 }
  .mainheading h1.posttitle {
      font-weight:700;
